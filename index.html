@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="Assets/css/style.css">
+  <title>Git it Done</title>
+</head>
+
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title"> Weather Dashboard</h1>
+  </header>
+
+
+  <main class="flex-row justify-space-between">
+    <div class="col-12 col-md-3">
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search By City</h3>
+        <form id="user-form" class="card-body">
+          <label class="form-label" for="username">City</label>
+          <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <div id="language-buttons" class="card-body">
+          <button data-language="Austin" class="btn">Austin</button>
+          <button data-language="Tampa" class="btn">Tampa</button>
+          <button data-language="Dallas" class="btn">Dallas</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-9">
+      <h2 class="subtitle">Showing Weather for: <span id="repo-search-term"></span></h2>
+      <div id="repos-container" class="list-group"></div>
+    </div>
+
+    <div class="col-12 col-md-9 day">
+      <h2 class="subtitle">5 Day Forecast <span id="repo-search-term"></span></h2>
+      <hr>
+      <div id="day-container"></div>
+    </div>
+  </main>
+
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+  integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+  <script src="Assets/js/script.js"></script>
+</body>
+
+</html>
